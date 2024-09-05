@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website </title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+<div id="header">
+<div class="container">
+    <nav>
+        <img src="images/work3.jpeg" class="logo">
+        <ul id="sidemenu">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <i class="fas fa-times" onclick="closemenu()"> </i>
+        </ul>
+        <i class="fas fa-bars" onclick="openmenu()"> </i>
+    </nav>
+    <div class="header-text">
+        <p> Developer </p>
+        <h1> Hi, I'm <span> Abhigna </span> <br> from Bengaluru</h1>
+    </div>
+</div>
+</div>
+    <!------------------about------------------>
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/work2.jpeg">
+            </div>
+
+                <div class="about-col-2"> 
+                    <h1 class="sub-title"> About Me </h1>
+                    <p>Hi I'm Abhigna ,I am doing my bachelors of Engineering degree 
+                        in Information Science from JSS Academy of Technical Eductation,
+                        Bangalore.I complted my schooling from Holy Angels High School and 
+                        12th from ASC Independent PU College.I am a developer skilled in JS,
+                        HTML, and CSS.
+                        Currently i'm Learning DSA and developing projects based on DSA.
+                        I'm also preparing for interviews, focusing on refining my
+                        technical and problem-solving skills
+                    </p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="Skills">
+                            <ul>
+                                <li><span>Java</span><br>coding</li>
+                                <li><span>Web development</span><br>web page designing</li>
+                                <li><span>c++</span><br>coding</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>2019</span><br>HOLY ANGELS HIGH SCHOOL</li>
+                                <li><span>2021</span><br>ASC PU COLLEGE</li>
+                                <li><span>2025</span><br>JSSATEB</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!----------service--------->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Web Design</h2>
+                <p>Front end developer with knowledge of html,css,javascript.
+                   I have worked on projects like Portfolio website ,spotify
+                   clone,and other practoce projects.
+                </p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-crop"></i>
+                <h2>JAVA</h2>
+                <p>I am very much interested in java and working on learning 
+                    core java and advance java
+                </p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <i class="fa-brands fa-app-store-ios"></i>
+                <h2>C++</h2>
+                <p>I Know the basics of C++.I'm learning DSA in C++ language.</p>
+                <a href="#">learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-----contact----->    
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-phone"></i> abhignkp05@gmail.com</p>
+                    <p><i class="fas fa-phone-square-alt"></i> 6363785855</p>
+                    <div class="social-icons">
+                        <a href="https://facebook.com"> <i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://instagram.com"> <i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://linkedin.com"> <i class="fa-brands fa-linkedin"></i></a>
+                        <a href=""> <i class="fa-brands fa-snapchat"></i></a>
+                    </div>
+                    <a href="images/Abhigna K Prasad_resume.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Enter your Email" required>
+                    <textarea type="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright Abhigna.Made with <i class="fa-regular fa-copyright">by Student </i></p>
+    </div>
+    </div>
+    <script>
+        var tablinks= document.getElementsByClassName("tab-links");
+        var tabcontents= document.getElementsByClassName("tab-contents");
+        
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+        </script>
+
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu");
+        function openmenu()
+        {
+            sidemenu.style.right = "0";
+        }
+        function closemenu()
+        {
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>
+
